@@ -1,0 +1,43 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Environments
+chatbot_env
+
+# IDE/editor config
+.vscode/
+.idea/
+*.swp
+
+# Jupyter/streamlit
+.ipynb_checkpoints/
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# SQLite database (if generated locally)
+*.db
+*.sqlite3
+
+# Node/React (if frontend is JS-based later)
+node_modules/
+
+# Test coverage and profiling
+.coverage
+htmlcov/
+*.prof
+
+# Git-specific
+*.orig
+.env
