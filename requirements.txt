@@ -1,22 +1,3 @@
-# === Core Web and API ===
-fastapi
-uvicorn
-
-# === Web Scraping ===
+streamlit
 requests
-beautifulsoup4
-
-# === LangChain and LLM ===
-langchain
-langchain-google-genai
-sentence-transformers
-
-# === ML Utilities ===
-scikit-learn
-numpy
-
-# === Env & Dev ===
 python-dotenv
-
-# === Optional, but useful ===
-pydantic
