@@ -1,0 +1,23 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.venv/
+.env
+.env.*
+
+# Ignore datasets & vectorstores (handled via /data volume)
+*.json
+*.jsonl
+*.csv
+*.tsv
+*.pdf
+*.docx
+
+# Ignore development tools
+.vscode/
+.idea/
+*.log

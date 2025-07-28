@@ -1,24 +1,29 @@
-version: '3.8'
+version: "3.9"
 
 services:
   backend:
     build:
-      context: .
-      dockerfile: app/Dockerfile.backend
-    container_name: changi-backend
+      context: ./app
+      dockerfile: Dockerfile.backend
+    container_name: backend
     ports:
       - "8000:8000"
+    volumes:
+      - ./data:/app/data:ro        # Mount data as read-only
+      - ./app:/app                 # Mount backend source code
     env_file:
       - .env
-    volumes:
-      - ./app:/app
+    restart: unless-stopped
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
-    container_name: changi-frontend
+    container_name: frontend
     ports:
       - "8501:8501"
+    volumes:
+      - .:/app
     depends_on:
       - backend
+    restart: unless-stopped
