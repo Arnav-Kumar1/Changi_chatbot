@@ -20,3 +20,7 @@ python-dotenv
 
 # === Optional, but useful ===
 pydantic
+
+# === Vector Database ===
+pinecone-client # <--- Add this line
+pinecone

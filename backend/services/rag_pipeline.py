@@ -1,7 +1,8 @@
 import os
-from app.services.vectorstore import vector_search
-from app.services.embeddings import query_encoder, reranker, deduplicate_by_embedding
-from app.sparse_search import SparseSearchIndex
+from services.vectorstore import vector_search
+from services.embeddings import query_encoder, reranker, deduplicate_by_embedding
+
+from sparse_search import SparseSearchIndex
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import SystemMessage, HumanMessage
 

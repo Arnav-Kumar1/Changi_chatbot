@@ -3,27 +3,33 @@ version: "3.9"
 services:
   backend:
     build:
-      context: .
-      dockerfile: app/Dockerfile.backend
-    container_name: backend
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    container_name: rag-backend
+    volumes:
+      - ./backend:/backend                 # live code reload (backend code)
+      - ./data:/backend/data               # mounting data folder inside container
+      - ./.env:/backend/.env               # optional, if you rely on .env vars
     ports:
       - "8000:8000"
-    volumes:
-      - ./data:/app/data:ro        # Mount data as read-only
-      - ./app:/app                 # Mount backend source code
+    environment:
+      - PYTHONPATH=/backend
     env_file:
       - .env
-    restart: unless-stopped
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
-    container_name: frontend
+    container_name: rag-frontend
+    volumes:
+      - ./frontend.py:/frontend/frontend.py  # live edits for Streamlit frontend
+      - ./.env:/frontend/.env                 # optional env vars
     ports:
       - "8501:8501"
-    volumes:
-      - .:/app
+    environment:
+      - BACKEND_API_URL=http://backend:8000/api/qa
     depends_on:
       - backend
-    restart: unless-stopped
+    env_file:
+      - .env
