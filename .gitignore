@@ -18,6 +18,7 @@ chatbot_env
 # Jupyter/streamlit
 .ipynb_checkpoints/
 .streamlit/
+scripts
 
 # OS files
 .DS_Store
