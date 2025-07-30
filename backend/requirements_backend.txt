@@ -21,4 +21,4 @@ python-dotenv
 pydantic
 
 # === Vector Database ===
-pinecone-client # <--- Add this line
+pinecone # <--- Add this line
