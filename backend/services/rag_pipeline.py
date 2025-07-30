@@ -192,5 +192,5 @@ def rag_pipeline(user_query: str, api_key: str) -> dict:
     return {
         "question": user_query,
         "answer": answer,
-        "sources": sources[:3]
+        "sources": sources[:2]
     }
