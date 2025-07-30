@@ -13,12 +13,8 @@ st.set_page_config(page_title="🛫 Changi & Jewel Chatbot", layout="wide")
 st.title("🛫 Changi & Jewel Airport RAG Chatbot")
 st.markdown("Ask anything about Changi or Jewel websites using a RAG-powered assistant.")
 
-# --- Sidebar for API Key input ---
-st.sidebar.header("🔐 API Key")
-user_api_key = st.sidebar.text_input("Enter your Gemini API Key:", value=API_KEY, type="password")
-if not user_api_key:
-    st.sidebar.warning("API key is required to query Gemini.")
-    st.stop()
+# Use the loaded API_KEY directly
+user_api_key = API_KEY
 
 # --- User Query ---
 user_query = st.text_input("💬 What would you like to know?")
