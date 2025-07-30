@@ -9,6 +9,8 @@ beautifulsoup4
 # === LangChain and LLM ===
 langchain
 langchain-google-genai
+google-generativeai
+
 
 # === ML Utilities ===
 scikit-learn
