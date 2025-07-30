@@ -6,7 +6,6 @@ A **Retrieval-Augmented Generation (RAG)** chatbot for answering queries related
 - 🧠 Sparse keyword-based TF-IDF search
 - 🤖 **Google Gemini LLM** (via **LangChain**)
 - 🛠️ Fullstack architecture with **FastAPI (backend)** and **Streamlit (frontend)**
-- 🔐 **BYOK (Bring Your Own Key)** supported — users can supply their own Google API key
 
 ---
 
@@ -32,7 +31,7 @@ This project supports **local development**, **Docker-based environments**, and 
 
 ```bash
 # 📦 OPTION 1: Clone the repo (recommended)
-git clone https://github.com/<your-org>/changi_jewel_rag_chatbot.git
+git clone https://github.com/Arnav-Kumar1/Changi_chatbot.git
 cd changi_jewel_rag_chatbot
 
 # OR
@@ -79,7 +78,11 @@ pip install -r requirements_backend.txt
 
 ```bash
 # From inside backend/ with virtual env active
-uvicorn main:app
+python -m uvicorn main:app
+
+or
+
+uvicorn main:app ( which ever works)
 ```
 
 ---
@@ -99,7 +102,7 @@ streamlit run frontend/frontend.py
 
 ---
 
-## 🐳 2. Dockerized Setup
+## 🐳 2. Dockerized Setup (local)
 
 ### ✅ Prerequisites
 
