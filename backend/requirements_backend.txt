@@ -9,7 +9,6 @@ beautifulsoup4
 # === LangChain and LLM ===
 langchain
 langchain-google-genai
-sentence-transformers
 
 # === ML Utilities ===
 scikit-learn
@@ -23,4 +22,3 @@ pydantic
 
 # === Vector Database ===
 pinecone-client # <--- Add this line
-pinecone
