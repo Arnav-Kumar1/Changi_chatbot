@@ -140,6 +140,7 @@ def ask_llm(query: str, context: str) -> str:
         "Do NOT invent or mention missing information. "
         "Avoid vague phrases like 'link provided in context'. Instead, say something like: "
         "'You can learn more here: https://example.com'. "
+        "Do not say, answer is not available in the context/document as it is not helpful.instead point the user to the relevant URL.\n\n"
         "Be concise, factual, and polite.\n\n"
         f"Context:\n{context}"
     )
