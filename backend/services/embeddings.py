@@ -1,5 +1,5 @@
 import numpy as np
-from backend.services.data_loader import load_all_embedding_chunks
+from services.data_loader import load_all_embedding_chunks
 
 # Module-level cache for loaded embedding chunks
 _cached_embedding_chunks = None

@@ -1,7 +1,7 @@
-from backend.services.vectorstore import vector_search
-from backend.services.embeddings import deduplicate_by_embedding
-from backend.services.data_loader import load_all_embedding_chunks
-from backend.sparse_search import SparseSearchIndex
+from services.vectorstore import vector_search
+from services.embeddings import deduplicate_by_embedding
+from services.data_loader import load_all_embedding_chunks
+from sparse_search import SparseSearchIndex
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import SystemMessage, HumanMessage
 import os
