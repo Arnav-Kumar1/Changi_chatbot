@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import qa
+from routes import qa, health
 
 
 app = FastAPI(
@@ -20,3 +20,4 @@ app.add_middleware(
 
 # Register your route(s)
 app.include_router(qa.router, prefix="/api")
+app.include_router(health.router, prefix="/api", tags=["Health"])
